@@ -14,8 +14,6 @@ interface PokemonInfo {
 
 const PokemonForm = (props: PokemonInfo) => {
 
-  console.log(props)
-
 
   const pokeImage = props.poke?.data?.sprites?.other?.["official-artwork"]?.front_default ?? props.poke?.data?.sprites?.front_default
 
@@ -32,7 +30,10 @@ const PokemonForm = (props: PokemonInfo) => {
         <p>Type:</p>
         <ul className="poke-list">{props?.poke?.data?.types?.map((info: Pokemon, _: number) => (<li key={_}>{info.type.name}</li>))}</ul>
         <Spacer size="12" style={{marginTop: '20px'}}/>
-        <Button />
+      <Button />
+      <div>
+        
+      </div>
     </article>
   )
 }

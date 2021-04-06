@@ -24,7 +24,7 @@ const Ditto = (props: PokemonApi) => {
         <title>{pokeName} | PokéSSR - AWS Amplify</title>
         <meta property="og:title" content={`${pokeName} | PokéSSR - AWS Amplify`} key="title" />
       </Head>
-      <PokemonForm poke={props}/>
+      <PokemonForm poke={props} />
     </section>
   )
       
