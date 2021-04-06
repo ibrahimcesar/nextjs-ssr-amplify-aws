@@ -41,6 +41,15 @@ article {
   text-decoration: none;
   font-weight: 700;
   font-size: 2rem;
+  color: #002147;
+}
+
+.poke-names:visited {
+  color: #00408b;
+}
+
+.poke-names:hover {
+  color: #001a39;
 }
 
 .poke-name {

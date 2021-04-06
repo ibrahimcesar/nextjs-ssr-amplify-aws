@@ -2,7 +2,6 @@
 import Link from "next/link"
 
 const Button = () => {
-
   return (
     <Link href="/random">
       <a>

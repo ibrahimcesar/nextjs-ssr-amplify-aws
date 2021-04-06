@@ -1,9 +1,14 @@
 
 import { GetServerSideProps } from 'next'
+import Head from "next/head"
 import Link from "next/link"
+// @ts-ignore  
 import { getPokemonHome } from '@/lib/fetch'
+// @ts-ignore  
 import { Pokedex } from '@/types/Pokedex'
+// @ts-ignore  
 import Button from "@/components/button"
+// @ts-ignore  
 import Spacer from "@/components/spacer"
 
 interface PokeDexApi {
@@ -13,6 +18,15 @@ interface PokeDexApi {
 const PokemonsPage = (props: PokeDexApi) => {
   
   return (
+    <>
+      <Head>
+          <title>PokéSSR - AWS Amplify</title>
+          <meta property="og:title" content="PokéSSR - AWS Amplify" key="title" />
+          <link rel="preconnect" href="https://fonts.gstatic.com"/>
+          <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap" rel="stylesheet" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta property="og:image" content={`${process.env.baseUrl}/og.png`} key="image" />
+          </Head>
     <div className="wrapper">
       <div></div>
       <div className="poke-content">
@@ -37,7 +51,8 @@ const PokemonsPage = (props: PokeDexApi) => {
         <Spacer size="12" style={{marginBottom: '40px'}}/>
         </div>
       <div></div>
-    </div>
+      </div>
+      </>
   )
 }
 
