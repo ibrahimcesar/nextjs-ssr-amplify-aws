@@ -25,7 +25,12 @@ const PokemonsPage = (props: PokeDexApi) => {
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
           <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap" rel="stylesheet" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <meta property="og:image" content={`${process.env.baseUrl}/og.png`} key="image" />
+        <meta property="og:image" content={`${process.env.baseUrl}/og.png`} key="image" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@ibrahimcesar" />
+        <meta name="twitter:title" content="PokéSSR - AWS Amplify" />
+        <meta name="twitter:description" content="Just another SSR site" />
+        <meta name="twitter:image" content={`${process.env.baseUrl}/og.png`} />
           </Head>
     <div className="wrapper">
       <div></div>
