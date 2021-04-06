@@ -1,12 +1,11 @@
 import { GetServerSideProps } from 'next'
 import Head from "next/head"
 import Image from 'next/image'
-import Link from "next/link"
-import { getPokemonHome, getPokemonData } from '../../lib/fetch'
-import { Pokemon } from '../../types/Pokemon'
-import { Pokedex } from '../../types/Pokedex'
-import Button from "../components/button"
-import Spacer from "../components/spacer"
+import { getPokemonHome, getPokemonData } from '@/lib/fetch'
+import Button from '@/components/button'
+import Spacer from '@/components/spacer'
+import { Pokemon } from '@/types/Pokemon'
+import { Pokedex } from '@/types/Pokedex'
 
 interface PokemonApi {
   data: Pokemon

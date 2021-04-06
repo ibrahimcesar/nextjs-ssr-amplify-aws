@@ -1,8 +1,8 @@
 interface Spacer {
   size: string
   axis?: 'vertical' | 'horizontal'
-  style?: {}
   delegated?: {}
+  style?: {}
 }
 
 const Spacer = (props: Spacer) => {

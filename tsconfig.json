@@ -18,7 +18,22 @@
     "isolatedModules": true,
     "allowJs": true,
     "resolveJsonModule": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": [
+        "/src/components/*"
+      ],
+      "@/lib/*": [
+        "/lib/*"
+      ],
+      "@/pages/*": [
+        "/src/pages/*"
+      ],
+      "@/types/*": [
+        "/types/*"
+      ],
+    },
   },
   "exclude": [
     "node_modules"
@@ -27,5 +42,5 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ]
+  ],
 }
