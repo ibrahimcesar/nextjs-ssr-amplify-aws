@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    baseUrl: "https://localhost.com"
+    baseUrl: "https://aws-ssr-pokemon.ibrahimcesar.cloud"
   },
   future: {
     webpack5: true
