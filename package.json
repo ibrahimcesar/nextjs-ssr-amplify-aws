@@ -1,0 +1,39 @@
+{
+  "name": "aws-amplify-ssr",
+  "version": "0.0.1",
+  "description": "Repository to test NextJS Server Side Rendering with AWS Amplify",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibrahimcesar/aws-amplify-ssr"
+  },
+  "author": "Ibrahim Cesar <email@ibrahimcesar.com> (https://twitter.com/ibrahimcesar)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ibrahimcesar/aws-amplify-ssr/issues"
+  },
+  "homepage": "https://github.com/ibrahimcesar/aws-amplify-ssr",
+  "keywords": [
+    "AWS",
+    "Amplify",
+    "AWS-Amplify",
+    "NextJS",
+    "SSR"
+  ],
+  "dependencies": {
+    "aws-amplify": "^3.3.26",
+    "next": "^10.0.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "redaxios": "^0.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "typescript": "^4.2.2"
+  }
+}
