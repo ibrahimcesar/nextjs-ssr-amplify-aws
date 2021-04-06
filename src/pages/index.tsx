@@ -37,7 +37,7 @@ const PokemonsPage = (props: PokeDexApi) => {
         <Button />
         <Spacer size="12" style={{marginBottom: '40px'}}/>
           <ul className="poke-list">
-          {props.data.results.map((pokemon, _index) => (
+          {props.data.results.map((pokemon: Pokedex, _index: number) => (
             <li key={pokemon.name}>
               <article>
               <span>{_index + 1} </span>

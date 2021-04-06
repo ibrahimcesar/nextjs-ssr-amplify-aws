@@ -37,7 +37,7 @@ const Ditto = (props: PokemonApi) => {
         <h1 className="poke-name">{props.data.species.name}</h1>
         <p>Number: {props.data.order}</p>
         <p>Type:</p>
-        <ul className="poke-list">{props.data.types.map((info, _) => (<li key={_}>{info.type.name}</li>))}</ul>
+        <ul className="poke-list">{props.data.types.map((info: Pokemon, _: number) => (<li key={_}>{info.type.name}</li>))}</ul>
         <Spacer size="12" style={{marginTop: '20px'}} />
         <Button />
       </article>
