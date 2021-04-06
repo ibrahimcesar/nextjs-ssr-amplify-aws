@@ -1,14 +1,11 @@
 import { GetServerSideProps } from 'next'
-import Image from 'next/image'
 import Head from "next/head"
-// @ts-ignore
-import Button from "@/components/button"
-// @ts-ignore  
-import Spacer from "@/components/spacer"
 // @ts-ignore  
 import { getPokemonData } from '@/lib/fetch'
 // @ts-ignore  
 import { Pokemon } from '@/types/Pokemon'
+// @ts-ignore 
+import PokemonForm from '@/components/pokemon'
 
 interface PokemonApi {
   data: Pokemon
@@ -27,21 +24,9 @@ const Ditto = (props: PokemonApi) => {
         <title>{pokeName} | PokéSSR - AWS Amplify</title>
         <meta property="og:title" content={`${pokeName} | PokéSSR - AWS Amplify`} key="title" />
       </Head>
-      <article className="ditto">
-        <Image 
-          src={pokeImage}
-          width={240}
-          height={240}
-          alt={`Pokémon ${props.data.name}`}
-        />
-        <h1 className="poke-name">{props.data.species.name}</h1>
-        <p>Number: {props.data.order}</p>
-        <p>Type:</p>
-        <ul className="poke-list">{props.data.types.map((info: Pokemon, _: number) => (<li key={_}>{info.type.name}</li>))}</ul>
-        <Spacer size="12" style={{marginTop: '20px'}} />
-        <Button />
-      </article>
-    </section>)
+      <PokemonForm poke={props}/>
+    </section>
+  )
       
 }
 
