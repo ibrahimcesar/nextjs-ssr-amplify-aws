@@ -1,4 +1,5 @@
-// import Image from 'next/image' ⚠️ Not supported yet in Amplify SSR deploy
+// import Image from 'next/image' ⚠️ Amplify SSR supports up to NextJS 9.0
+import Link from 'next/link'
 // @ts-ignore  
 import Button from '@/components/button'
 // @ts-ignore  
@@ -31,9 +32,13 @@ const PokemonForm = (props: PokemonInfo) => {
         <ul className="poke-list">{props?.poke?.data?.types?.map((info: Pokemon, _: number) => (<li key={_}>{info.type.name}</li>))}</ul>
         <Spacer size="12" style={{marginTop: '20px'}}/>
       <Button />
-      <div>
-        
-      </div>
+      <Link href="/"><a className="poke-home-link"><footer>
+        <span role="img" aria-label="Back to Home" className="poke-home">
+          🏠 
+        </span>
+        <span>{'<<'} Back to Home</span>
+
+      </footer></a></Link>
     </article>
   )
 }
