@@ -38,10 +38,10 @@ const PokemonsPage = (props: PokeDexApi) => {
           <Button />
           <Spacer size="12" style={{marginBottom: '40px'}}/>
               <ul className="poke-list">
-              {props.data.results.map((pokemon: Result, _index: number) => (
+              {props.data.results.map((pokemon: Result, index: number) => (
                 <li key={pokemon.name}>
                   <article>
-                  <span>{_index + 1} </span>
+                  <span>{index + 1} </span>
                   <Link href={pokemon.name}><a className="poke-names">{pokemon.name}</a></Link>
                   </article>
                 </li>
