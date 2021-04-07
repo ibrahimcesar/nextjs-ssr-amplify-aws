@@ -14,33 +14,35 @@
     "target": "ES6",
     "skipLibCheck": true,
     "noEmit": true,
+    "noImplicitAny":true,
     "module": "commonjs",
-    "isolatedModules": true,
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@/components/*": [
-        "/src/components/*"
+        "./src/components/*"
       ],
       "@/lib/*": [
-        "/lib/*"
+        "./lib/*"
       ],
       "@/pages/*": [
-        "/src/pages/*"
+        "./src/pages/*"
       ],
       "@/types/*": [
-        "/types/*"
-      ],
+        "./types/*"
+      ]
     },
+    "isolatedModules": true
   },
   "exclude": [
     "node_modules"
   ],
   "include": [
+    "src",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+  ]
 }

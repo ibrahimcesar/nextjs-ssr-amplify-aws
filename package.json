@@ -1,6 +1,6 @@
 {
   "name": "aws-amplify-ssr",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Repository to test NextJS Server Side Rendering with AWS Amplify",
   "scripts": {
     "dev": "next dev",
