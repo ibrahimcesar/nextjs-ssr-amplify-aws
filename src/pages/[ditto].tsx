@@ -1,8 +1,9 @@
 import { GetServerSideProps } from 'next'
 import Head from "next/head"
 import { getPokemonData } from '@/lib/fetch'
-import { Pokemon } from '@/types/Pokemon'
 import PokemonForm from '@/components/pokemon'
+
+import type { Pokemon } from '@/types/Pokemon'
 
 interface PokemonApi {
   data: Pokemon

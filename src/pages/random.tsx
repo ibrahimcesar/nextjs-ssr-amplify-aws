@@ -1,13 +1,10 @@
 import { GetServerSideProps } from 'next'
 import Head from "next/head"
-// @ts-ignore  
 import { getPokemonHome, getPokemonData } from '@/lib/fetch'
-// @ts-ignore  
-import { Pokemon } from '@/types/Pokemon'
-// @ts-ignore  
-import { Pokedex } from '@/types/Pokedex'
-// @ts-ignore 
 import PokemonForm from '@/components/pokemon'
+
+import type { Pokemon } from '@/types/Pokemon'
+import type { Pokedex } from '@/types/Pokedex'
 
 interface PokemonApi {
   data: Pokemon

@@ -3,9 +3,10 @@ import { GetServerSideProps } from 'next'
 import Head from "next/head"
 import Link from "next/link"
 import { getPokemonHome } from '@/lib/fetch'
-import { Pokedex, Result } from '@/types/Pokedex'
 import Button from "@/components/button"
 import Spacer from "@/components/spacer"
+
+import type { Pokedex, Result } from '@/types/Pokedex'
 
 interface PokeDexApi {
   data: Pokedex
