@@ -1,26 +1,26 @@
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
 
-interface gtagEvent {
-  action?: string
-  category?: string
-  label?: string
-  value?: string
-}
+type GTagEvent = {
+  action: string;
+  category: string;
+  label: string;
+  value: number;
+};
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export const pageview = (url: string) => {
-  if (window) {
+export const pageview = (url: URL) => {
+  if (typeof GA_TRACKING_ID === 'string') {
     window.gtag('config', GA_TRACKING_ID, {
-    page_path: url,
-  })
+      page_path: url,
+    }) 
   }
 }
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
-export const event = (events: gtagEvent) => {
-  window.gtag('event', events.action, {
-    event_category: events.category,
-    event_label: events.label,
-    value: events.value,
+export const event = ({ action, category, label, value }: GTagEvent) => {
+  window.gtag('event', action, {
+    event_category: category,
+    event_label: label,
+    value: value,
   })
 }
