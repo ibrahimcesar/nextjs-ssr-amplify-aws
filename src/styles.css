@@ -17,8 +17,8 @@ article {
 }
 
 footer {
-  text-align: center;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .wrapper {
@@ -33,8 +33,9 @@ footer {
 }
 
 .ditto {
-  justify-self: center;
   align-self: center;
+  justify-self: center;
+  padding-top: 5%;
 }
 
 .poke-list {
@@ -42,11 +43,11 @@ footer {
 }
 
 .poke-names {
+  color: #002147;
+  font-size: 1.8rem;
+  font-weight: 700;
   text-transform: capitalize;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: #002147;
 }
 
 .poke-names:visited {
@@ -66,20 +67,21 @@ footer {
 }
 
 .poke-center {
+  margin-bottom: 1%;
   text-align: center;
 }
 
 .ditto footer {
-  margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr;
-  text-align: center;
   font-size: 1rem;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .poke-home-link {
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .poke-home {
