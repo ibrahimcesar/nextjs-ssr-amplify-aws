@@ -9,7 +9,8 @@ import type { Pokemon } from '@/types/Pokemon'
 import type { Pokedex } from '@/types/Pokedex'
 
 interface PokemonApi {
-  data: Pokemon
+  data: Pokemon,
+  date: string
 }
 
 const Porygon = (props: PokemonApi) => {
@@ -29,6 +30,7 @@ const Porygon = (props: PokemonApi) => {
         <meta property="og:title" content={`${pokeName} | PokéSSR - AWS Amplify`} key="title" />
       </Head>
       <PokemonForm poke={props} />
+      <p className="poke-center">{`Generated at ${new Date(props.date).toLocaleString()}`}</p>
     </section>
   )
       
@@ -47,7 +49,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       data,
-      revalidate: 3
+      revalidate: 600,
+      date: new Date().toISOString(),
     }
   }
 };

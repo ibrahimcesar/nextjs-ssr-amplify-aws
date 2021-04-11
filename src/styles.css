@@ -65,7 +65,9 @@ footer {
   align-self: center;
 }
 
-
+.poke-center {
+  text-align: center;
+}
 
 .ditto footer {
   margin-top: 30px;
