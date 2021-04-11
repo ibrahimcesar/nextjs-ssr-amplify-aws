@@ -51,9 +51,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       data,
-      revalidate: 10,
       date: new Date().toISOString(),
-    }
+    },
+    revalidate: 100
   }
 };
 
