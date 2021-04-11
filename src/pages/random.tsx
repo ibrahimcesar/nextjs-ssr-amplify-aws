@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next'
 import Head from "next/head"
-import { getPokemonHome, getPokemonData } from '@/lib/fetch'
+import { getPokemons, getPokemonData } from '@/lib/fetch'
 import PokemonForm from '@/components/pokemon'
 
 import type { Pokemon } from '@/types/Pokemon'
@@ -29,7 +29,7 @@ const Ditto = (props: PokemonApi) => {
 
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const random = await getPokemonHome() as Pokedex
+  const random = await getPokemons() as Pokedex
 
   const ditto = random.results[random.results.length * Math.random() | 0].name
 

@@ -2,7 +2,7 @@
 import { GetServerSideProps } from 'next'
 import Head from "next/head"
 import Link from "next/link"
-import { getPokemonHome } from '@/lib/fetch'
+import { getPokemons } from '@/lib/fetch'
 import Button from "@/components/button"
 import Spacer from "@/components/spacer"
 
@@ -59,7 +59,7 @@ const PokemonsPage = (props: PokeDexApi) => {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const data = await getPokemonHome()
+  const data = await getPokemons()
   return {
     props: {
       data

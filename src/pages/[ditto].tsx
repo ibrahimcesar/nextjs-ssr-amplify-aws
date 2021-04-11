@@ -10,9 +10,7 @@ interface PokemonApi {
 }
 
 const Ditto = (props: PokemonApi) => {
-  if (!props.data.name) return null;
-
-  const pokeImage = props.data?.sprites?.other?.["official-artwork"]?.front_default ?? props.data?.sprites?.front_default
+  if (!props?.data?.name) return null;
 
   const pokeName = props.data.species.name.charAt(0).toUpperCase() + props.data.species.name.slice(1)
   
