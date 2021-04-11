@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       data,
       date: new Date().toISOString(),
     },
-    revalidate: 100
+    revalidate: 60 * 5
   }
 };
 
