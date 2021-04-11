@@ -31,13 +31,12 @@ const PokemonForm = (props: PokemonInfo) => {
           <li key={index}> {info.type.name}</li>))}</ul>
         <Spacer size="12" style={{marginTop: '20px'}}/>
       <Button />
-      <Link href="/"><a className="poke-home-link"><footer>
+      <Link href="/"><a className="poke-home-link">
         <span role="img" aria-label="Back to Home" className="poke-home">
           🏠 
         </span>
         <span>{'<<'} Back to Home</span>
-
-      </footer></a></Link>
+      </a></Link>
     </article>
   )
 }

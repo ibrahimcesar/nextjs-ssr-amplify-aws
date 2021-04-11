@@ -29,11 +29,9 @@ footer {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh;
 }
 
 .ditto {
-  align-self: center;
   justify-self: center;
   padding-top: 5%;
 }
@@ -71,16 +69,14 @@ footer {
   text-align: center;
 }
 
-.ditto footer {
+.poke-home-link {
   display: grid;
-  grid-template-columns: 1fr;
   font-size: 1rem;
+  font-weight: 600;
+  grid-template-columns: 1fr;
+  margin-bottom: 30px;
   margin-top: 30px;
   text-align: center;
-}
-
-.poke-home-link {
-  font-weight: 600;
   text-decoration: none;
 }
 

@@ -24,14 +24,16 @@ const Porygon = (props: PokemonApi) => {
   const pokeName = props.data.species.name.charAt(0).toUpperCase() + props.data.species.name.slice(1)
   
   return (
+    <>
     <section className="container">
       <Head>
         <title>{pokeName} | PokéSSR - AWS Amplify</title>
         <meta property="og:title" content={`${pokeName} | PokéSSR - AWS Amplify`} key="title" />
       </Head>
       <PokemonForm poke={props} />
-      <p className="poke-center">{`Generated at ${new Date(props.date).toLocaleString()}`}</p>
     </section>
+    <p className="poke-center">{`Generated at ${new Date(props.date).toLocaleString()}`}</p>
+    </>
   )
       
 }
@@ -49,7 +51,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       data,
-      revalidate: 600,
+      revalidate: 10,
       date: new Date().toISOString(),
     }
   }
@@ -62,8 +64,6 @@ export const getStaticPaths: GetStaticPaths<{ name: string }> = async () => {
   const paths = pokemons.results.map((pokemon) => {
     return { params: { name: pokemon.name.toString() } };
   });
-
-  console.log(paths)
 
   return {
     fallback: true,
