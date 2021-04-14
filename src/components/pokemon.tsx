@@ -12,7 +12,6 @@ interface PokemonInfo {
 
 const PokemonForm = (props: PokemonInfo) => {
 
-
   const pokeImage = props.poke?.data?.sprites?.other?.["official-artwork"]?.front_default ?? props.poke?.data?.sprites?.front_default
 
   return (

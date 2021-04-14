@@ -60,6 +60,7 @@ const PokemonsPage = (props: PokeDexApi) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const data = await getPokemons()
+
   return {
     props: {
       data
