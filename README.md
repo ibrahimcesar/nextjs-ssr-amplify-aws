@@ -8,5 +8,5 @@
 </h1>
 
 
-https://ibrahimcesar-github.s3.amazonaws.com/pokessr/01-amplify.png
+// https://ibrahimcesar-github.s3.amazonaws.com/pokessr/01-amplify.png
 [PokéAPI Status Page](https://updown.io/akzp)
