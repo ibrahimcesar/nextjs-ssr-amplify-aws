@@ -13,7 +13,7 @@ class PokeDoc extends Document {
     return (
       <Html>
         <Head>
-           {/* Global Site Tag (gtag.js) - Google Analytics */}
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -34,7 +34,7 @@ class PokeDoc extends Document {
         <body>
           <Main />
           <NextScript />
-          <footer>© {new Date().getFullYear()} Ibrahim Cesar | <Link href="https://updown.io/akzp"><a>PokéAPI Status</a></Link></footer>
+          <footer>© {new Date().getFullYear()} Ibrahim Cesar | <Link href="https://updown.io/akzp">PokéAPI Status</Link></footer>
         </body>
       </Html>
     )
